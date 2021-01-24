@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  myrabbitmq:
+    container_name: myrabbitmq
+    image: ${DOCKER_REGISTRY-}myrabbitmq
+    build:
+      context: .
+      dockerfile: RabbitMQ/Dockerfile
+    healthcheck:
+      test: ["CMD", "nc", "-z", "rabbitmq", "5672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+      - TZ=Asia/Colombo
+      # - RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq.conf
+    volumes:
+      - data01:/var/lib/rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - rabbitmq-communication
+    mem_limit: 1024M
+    mem_reservation: 512M
+    restart: always
+
+volumes:
+  data01:
+    driver: local
+
+networks:
+  rabbitmq-communication:
+    driver: bridge

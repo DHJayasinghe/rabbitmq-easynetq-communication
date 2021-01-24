@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "name": "rabbitmq_adm1n",
+      "password": "Admin@#789",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "CUSTOM_VHOST"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "rabbitmq_adm1n",
+      "vhost": "CUSTOM_VHOST",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "parameters": [],
+  "policies": [],
+  "exchanges": [
+    {
+      "name": "mycustom.exchange",
+      "vhost": "CUSTOM_VHOST",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "test.communication.queue",
+      "vhost": "CUSTOM_VHOST",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "mycustom.exchange",
+      "vhost": "CUSTOM_VHOST",
+      "destination": "test.communication.queue",
+      "destination_type": "queue",
+      "routing_key": "test.communication.queue.#",
+      "arguments": {}
+    }
+  ]
+}
