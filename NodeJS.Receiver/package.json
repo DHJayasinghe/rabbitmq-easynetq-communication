@@ -1,0 +1,9 @@
+{
+  "name": "node-js.receiver",
+  "version": "0.0.0",
+  "description": "NodeJS.Receiver",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
