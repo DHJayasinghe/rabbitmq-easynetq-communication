@@ -4,6 +4,9 @@
   "description": "NodeJS.Receiver",
   "main": "app.js",
   "author": {
-    "name": ""
+    "name": "Dhanuka Jayasinghe"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3"
   }
 }
