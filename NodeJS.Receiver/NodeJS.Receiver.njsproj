@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9a69fd88-ff46-4766-b03a-ac7c4acdc8a5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>sendreceive_receiver.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -28,7 +28,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.js" />
+    <Content Include="rpc_responder.js" />
+    <Content Include="sendreceive_sender.js" />
+    <Content Include="sendreceive_receiver.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>

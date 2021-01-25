@@ -12,7 +12,7 @@ const exchange = "mycustom.exchange";
 // Consumer
 open
     .then(function (conn) {
-        console.log(`[ ${new Date()} ] Node.JS Send/Receive pattern rabbitmq consumer started`);
+        console.log(`[ ${new Date()} ] Node.JS Send/Receive pattern rabbitmq receiver started`);
         return conn.createChannel();
     })
     .then(function (ch) {
@@ -21,6 +21,7 @@ open
                 await ch.bindQueue(q, exchange, q);
                 return ch.consume(q, async function (msg) {
                     const message = JSON.parse(msg.content.toString("utf8"));
+                    console.log(message);
                     console.log(`[ ${new Date()} ] Message received: ${message}`);
 
                     // acknowledge as message received

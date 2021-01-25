@@ -21,7 +21,7 @@ namespace DotnetCore.Sender
                 for (int i = 0; i < 50; i++)
                 {
                     int remainder = i % 5;
-                    if (remainder < 3 && i % 10 != 0) // skip multiplication of 10
+                    if (remainder < 3 && i % 10 != 0) // intentionally skip multiplication of 10
                     {
                         //var message = $"Hello World {i}!"; // plain text message
                         var message = new PlaceOrderRequestMessage
@@ -41,7 +41,7 @@ namespace DotnetCore.Sender
                         //bus.SendReceive.SendAsync("test.communication.queue", message);
 
                         bus.SendReceive.SendAsync("test.communication.queue", message);
-                        Thread.Sleep(1000 * remainder); // randomly sleep the thread to slow down the process
+                        Thread.Sleep(1000 * remainder); // intentionally sleep the thread to slow down the process
                     }
                 }
             }
