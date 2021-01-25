@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.Sender", "DotnetCoreClient\DotnetCore.Sender.csproj", "{2DE08528-35A5-49A0-B421-6DD9BAE48D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.Sender", "DotnetCore.Sender\DotnetCore.Sender.csproj", "{2DE08528-35A5-49A0-B421-6DD9BAE48D6D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{0DC841AC-153F-4E54-8747-2C524BF73B09}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,9 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{0D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.Receiver", "DotnetCore.Receiver\DotnetCore.Receiver.csproj", "{22DD6CF2-34F1-429F-B554-16C00374D74C}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeJS.Receiver", "NodeJS.Receiver\NodeJS.Receiver.njsproj", "{9A69FD88-FF46-4766-B03A-AC7C4ACDC8A5}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeJS.Receiver", "NodeJS\NodeJS.njsproj", "{9A69FD88-FF46-4766-B03A-AC7C4ACDC8A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.Rpc.Requester", "DotnetCore.Rpc\DotnetCore.Rpc.Requester.csproj", "{AF919B0D-DBD7-40A4-A1BF-DD2699CAD411}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.Rpc.Requester", "DotnetCore.Rpc.Requester\DotnetCore.Rpc.Requester.csproj", "{AF919B0D-DBD7-40A4-A1BF-DD2699CAD411}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.Rpc.Responder", "DotnetCore.Rpc.Responder\DotnetCore.Rpc.Responder.csproj", "{D3233E16-5C84-45BC-9970-DC0888D28859}"
 EndProject
