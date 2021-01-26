@@ -12,9 +12,10 @@ namespace DotnetCore.Rpc.Requester
             registerServices: s =>
             {
                 s.Register<ITypeNameSerializer, EventBusTypeNameSerializer>();
+                s.Register<IConventions, EventBusConventions>();
             });
 
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             try
             {

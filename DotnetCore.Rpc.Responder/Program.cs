@@ -13,6 +13,7 @@ namespace DotnetCore.Rpc.Responder
             registerServices: s =>
             {
                 s.Register<ITypeNameSerializer, EventBusTypeNameSerializer>();
+                s.Register<IConventions, EventBusConventions>();
             });
 
         static async Task Main(string[] args)

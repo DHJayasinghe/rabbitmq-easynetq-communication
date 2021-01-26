@@ -31,11 +31,27 @@
       "auto_delete": false,
       "internal": false,
       "arguments": {}
+    },
+    {
+      "name": "easy_net_q_rpc",
+      "vhost": "CUSTOM_VHOST",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
     }
   ],
   "queues": [
     {
       "name": "test.communication.queue",
+      "vhost": "CUSTOM_VHOST",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "payment.validity.check.queue",
       "vhost": "CUSTOM_VHOST",
       "durable": true,
       "auto_delete": false,
@@ -49,6 +65,14 @@
       "destination": "test.communication.queue",
       "destination_type": "queue",
       "routing_key": "test.communication.queue.#",
+      "arguments": {}
+    },
+    {
+      "source": "easy_net_q_rpc",
+      "vhost": "CUSTOM_VHOST",
+      "destination": "payment.validity.check.queue",
+      "destination_type": "queue",
+      "routing_key": "payment.validity.check.queue.#",
       "arguments": {}
     }
   ]
