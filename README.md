@@ -28,6 +28,6 @@ This repository mainly for the usage of EasyNetQ libraries concerning given cons
     1. .NET Core to .NET Core - Run `DotnetCore.Rpc.Responder` and `DotnetCore.Rpc.Requester` projects
     2. .NET Core to Node.Js - Run `NodeJS/rpc_responder.js` and `DotnetCore.Rpc.Requester` projects
     
-## Thing TODO:
+## Things TODO:
 1. .NET EasyNetQ to RabbitMQ Java Client communication
 2. .NET EasyNetQ to RabbitMQ Python Client communication
