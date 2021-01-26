@@ -22,7 +22,7 @@ namespace DotnetCore.Rpc.Responder
             {
                 await bus.Rpc.RespondAsync<PaymentValidityCheckRequestMessage, PaymentValidityCheckResponseMessage>(request =>
                 {
-                    Console.WriteLine($"Received request: : {JsonConvert.SerializeObject(request)}");
+                    Console.WriteLine($"Received request: {JsonConvert.SerializeObject(request)}");
                     // some example validation logic
                     bool valid = request.CustomerId > 0 && request.Amount > 0 && request.PaymentType == "CASH";
                     return new PaymentValidityCheckResponseMessage
